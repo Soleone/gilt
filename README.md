@@ -54,21 +54,21 @@ git clone https://github.com/Soleone/gilt.git && cd gilt
 | Obsidian | `#0D0F12` | Main desktop and application background |
 | Deep obsidian | `#050607` | Deepest background and recesses |
 | Raised stone | `#181B20` | Raised panels and lighter surfaces |
-| Parchment | `#D8D1C0` | Primary text |
-| Light parchment | `#E6DECB` | Raised and secondary emphasis, operators |
-| Bright ivory | `#F5EBD2` | Cursor, functions, selected text |
+| Parchment | `#D8D1C0` | Primary text and operators |
+| Light parchment | `#E6DECB` | Raised and secondary emphasis, quotes |
+| Bright ivory | `#F5EBD2` | Cursor, types, builtins like `self`, selected text |
 | Dusty taupe | `#716957` | Dividers, borders, muted UI |
-| Sovereign gold | `#D4AF37` | Focus, borders, active states, types |
+| Sovereign gold | `#D4AF37` | Focus, borders, active states, headings |
 | Gold in shadow | `#342D1B` | Selection background and low gold surfaces |
-| Oxblood | `#BC6060` | Errors and urgent states |
-| Copper | `#C27B48` | Keywords, inline code, and warm contrast |
-| Jade | `#7FA37A` | Strings, numbers, and success states |
+| Oxblood | `#BC6060` | Keywords and urgent states |
+| Copper | `#C27B48` | String escapes, inline code, and warm contrast |
+| Jade | `#7FA37A` | Success states |
 | Verdigris | `#72A5A4` | Link URLs and cool contrast |
-| Lapis | `#6F8FAF` | Variables and navigation |
-| Amethyst | `#9A7AA0` | Builtins like `self` and structural emphasis |
+| Lapis | `#6F8FAF` | Navigation and cool contrast |
+| Amethyst | `#9A7AA0` | Structural emphasis |
 | Bronze | `#8A6240` | Supporting earth tone and metal detail |
 
-In code, comments use a slightly lighter muted taupe (`#918977`) so they stay readable. Every app takes its colours from the same roles in [`roles.toml`](roles.toml), so a string is jade in Helix, Neovim, VS Code, bat and Pi alike.
+In code, keywords are oxblood, functions bright gold (`#E7C968`), variables bright lapis (`#8FAECC`), and strings, numbers and constants bright jade (`#9DBB8E`). Comments use a slightly lighter muted taupe (`#918977`) so they stay readable. Every app takes its colours from the same roles in [`roles.toml`](roles.toml), so a string is bright jade in Helix, Neovim, VS Code, bat and Pi alike.
 
 ## Wallpapers
 

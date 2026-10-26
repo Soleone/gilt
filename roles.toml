@@ -35,17 +35,17 @@ deepOxblood = "#8F3F3F"     # destructive on the light (parchment) web variant
 [roles]
 # Syntax
 comment = "mutedTaupe"
-keyword = "orange"
-function = "bright_foreground"
-variable = "blue"
-string = "green"
-number = "green"
-type = "yellow"
-operator = "light_foreground"
+keyword = "red"
+function = "bright_yellow"
+variable = "bright_blue"
+string = "bright_green"
+number = "bright_green"
+type = "bright_foreground"
+operator = "foreground"
 punctuation = "dark_foreground"
-constant = "green"          # true, false, nil, CONSTANTS: literals, like strings and numbers
-escape = "bright_yellow"    # \n, regex, format specifiers inside strings
-builtin = "magenta"         # self, this, builtin variables, macros
+constant = "bright_green"       # true, false, nil, CONSTANTS: literals, like strings and numbers
+escape = "orange"               # \n, regex, format specifiers inside strings
+builtin = "bright_foreground"   # self, this, builtin variables, macros
 
 # Markup
 heading = "yellow"
@@ -87,4 +87,5 @@ pairs = [["selection_fg", "selection_bg"], ["diff_add_fg", "diff_add_bg"], ["dif
 
 [contrast.allow]
 punctuation = "recedes on purpose, 4.14:1 on background"
+keyword = "oxblood reads fine for short words, 4.09:1 on popups"
 ansi8 = "bright black is dim by terminal convention, 3.53:1"
