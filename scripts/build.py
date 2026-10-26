@@ -10,10 +10,11 @@ templates/<path> renders to <path>, static/<path> is copied to <path> verbatim.
 Placeholders: {{ name }} or {{ name | filter | filter(arg) }}, where name is a
 colors.toml key, an [extra] tone, a role, or ansiN. Filters: lower, upper, bare
 (no leading #), alpha(0..1) (#RRGGBBAA), mix(other, 0..1) (solid blend toward
-another colour). {{ generated }} is the do-not-edit notice.
+another colour), oklch (CSS oklch()). {{ generated }} is the do-not-edit notice.
 """
 
 import argparse
+import math
 import re
 import sys
 import tomllib
@@ -70,6 +71,24 @@ def unit(arg, filter_name):
     return a
 
 
+def oklch(hex_value):
+    """Return (L, C, H) for an sRGB hex colour, per Bjorn Ottosson's OKLab."""
+    def linear(c):
+        c /= 255
+        return c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4
+
+    r, g, b = (linear(x) for x in bytes.fromhex(hex_value.lstrip("#")[:6]))
+    l = (0.4122214708 * r + 0.5363325363 * g + 0.0514459929 * b) ** (1 / 3)
+    m = (0.2119034982 * r + 0.6806995451 * g + 0.1073969566 * b) ** (1 / 3)
+    s = (0.0883024619 * r + 0.2817188376 * g + 0.6299787005 * b) ** (1 / 3)
+    L = 0.2104542553 * l + 0.7936177850 * m - 0.0040720468 * s
+    a = 1.9779984951 * l - 2.4285922050 * m + 0.4505937099 * s
+    bb = 0.0259040371 * l + 0.7827717662 * m - 0.8086757660 * s
+    C = (a * a + bb * bb) ** 0.5
+    H = math.degrees(math.atan2(bb, a)) % 360 if C > 1e-4 else 0.0
+    return L, C, H
+
+
 def apply_filter(hex_value, name, arg, names):
     if name == "lower":
         return hex_value.lower()
@@ -87,6 +106,9 @@ def apply_filter(hex_value, name, arg, names):
             raise BuildError(f"mix: unknown colour {other!r}")
         a, b = (bytes.fromhex(h.lstrip("#")[:6]) for h in (hex_value, names[other]))
         return "#" + "".join(f"{round(x + (y - x) * t):02X}" for x, y in zip(a, b))
+    if name == "oklch":
+        L, C, H = oklch(hex_value)
+        return f"oklch({L:.4f} {C:.4f} {H:.4f})"
     raise BuildError(f"unknown filter {name!r}")
 
 

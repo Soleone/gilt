@@ -9,6 +9,7 @@ oxbloodSurface = "#2B1C1D"  # diff removed / error ground
 split = "#4F4A3F"           # pane splits and inactive borders
 champagne = "#F4E6A6"       # brightest gold highlight
 shadeStone = "#131519"      # halfway between obsidian and raised stone: cursorline
+deepOxblood = "#8F3F3F"     # destructive on the light (parchment) web variant
 
 # Terminal colours. colors.toml has no black or white, so they are mapped here.
 [ansi]
