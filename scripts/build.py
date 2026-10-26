@@ -9,7 +9,8 @@
 templates/<path> renders to <path>, static/<path> is copied to <path> verbatim.
 Placeholders: {{ name }} or {{ name | filter | filter(arg) }}, where name is a
 colors.toml key, an [extra] tone, a role, or ansiN. Filters: lower, upper, bare
-(no leading #), alpha(0..1) (#RRGGBBAA). {{ generated }} is the do-not-edit notice.
+(no leading #), alpha(0..1) (#RRGGBBAA), mix(other, 0..1) (solid blend toward
+another colour). {{ generated }} is the do-not-edit notice.
 """
 
 import argparse
@@ -59,7 +60,17 @@ def load_colors():
     return names, roles
 
 
-def apply_filter(hex_value, name, arg):
+def unit(arg, filter_name):
+    try:
+        a = float(arg)
+    except (TypeError, ValueError):
+        a = -1
+    if not 0 <= a <= 1:
+        raise BuildError(f"{filter_name} needs a number between 0 and 1, got {arg!r}")
+    return a
+
+
+def apply_filter(hex_value, name, arg, names):
     if name == "lower":
         return hex_value.lower()
     if name == "upper":
@@ -67,13 +78,15 @@ def apply_filter(hex_value, name, arg):
     if name == "bare":
         return hex_value.lstrip("#")
     if name == "alpha":
-        try:
-            a = float(arg)
-        except (TypeError, ValueError):
-            raise BuildError(f"alpha needs a number between 0 and 1, got {arg!r}")
-        if not 0 <= a <= 1:
-            raise BuildError(f"alpha needs a number between 0 and 1, got {arg!r}")
-        return f"{hex_value}{round(a * 255):02X}"
+        return f"{hex_value}{round(unit(arg, 'alpha') * 255):02X}"
+    if name == "mix":
+        # mix(other, t): move t of the way from this colour to other, as a solid colour.
+        other, _, t = (arg or "").partition(",")
+        other, t = other.strip(), unit(t.strip(), "mix")
+        if other not in names:
+            raise BuildError(f"mix: unknown colour {other!r}")
+        a, b = (bytes.fromhex(h.lstrip("#")[:6]) for h in (hex_value, names[other]))
+        return "#" + "".join(f"{round(x + (y - x) * t):02X}" for x, y in zip(a, b))
     raise BuildError(f"unknown filter {name!r}")
 
 
@@ -87,7 +100,7 @@ def render(text, names, used, source):
         used.add(name)
         value = names[name]
         for f in FILTER.finditer(filters):
-            value = apply_filter(value, f.group(1), f.group(2))
+            value = apply_filter(value, f.group(1), f.group(2), names)
         return value
 
     out = PLACEHOLDER.sub(replace, text)

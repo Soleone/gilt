@@ -47,14 +47,29 @@ cursor = "bright_foreground"
 cursor_text = "background"
 selection_bg = "selection"
 selection_fg = "bright_foreground"
+border = "muted"
+dim_text = "mutedTaupe"
+
+# States
+error = "bright_red"
+warning = "bright_yellow"
+success = "bright_green"
+info = "bright_blue"
+
+# Diff
+diff_add_fg = "bright_green"
+diff_add_bg = "jadeSurface"
+diff_remove_fg = "bright_red"
+diff_remove_bg = "oxbloodSurface"
 
 # Text roles must reach the minimum ratio on every surface, unless allowed with a reason.
 [contrast]
 minimum = 4.5
 surfaces = ["background", "lighter_background"]
-text = ["comment", "keyword", "function", "variable", "string", "number", "type", "operator", "punctuation"]
+text = ["comment", "keyword", "function", "variable", "string", "number", "type", "operator", "punctuation",
+        "dim_text", "error", "warning", "success", "info"]
 terminal = ["ansi1", "ansi2", "ansi3", "ansi4", "ansi5", "ansi6", "ansi7", "ansi8", "ansi9", "ansi10", "ansi11", "ansi12", "ansi13", "ansi14", "ansi15"]
-pairs = [["selection_fg", "selection_bg"]]
+pairs = [["selection_fg", "selection_bg"], ["diff_add_fg", "diff_add_bg"], ["diff_remove_fg", "diff_remove_bg"]]
 
 [contrast.allow]
 punctuation = "recedes on purpose, 4.14:1 on background"

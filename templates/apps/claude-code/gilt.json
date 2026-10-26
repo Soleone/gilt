@@ -1,0 +1,60 @@
+{
+  "name": "Gilt",
+  "base": "dark",
+  "overrides": {
+    "claude": "{{ accent }}",
+    "claudeShimmer": "{{ bright_yellow }}",
+    "text": "{{ foreground }}",
+    "inverseText": "{{ background }}",
+    "inactive": "{{ dim_text }}",
+    "inactiveShimmer": "{{ light_foreground }}",
+    "subtle": "{{ border }}",
+    "suggestion": "{{ bright_yellow }}",
+    "permission": "{{ accent }}",
+    "permissionShimmer": "{{ champagne }}",
+    "remember": "{{ magenta }}",
+
+    "success": "{{ success }}",
+    "error": "{{ error }}",
+    "warning": "{{ warning }}",
+    "warningShimmer": "{{ champagne }}",
+    "merged": "{{ magenta }}",
+
+    "promptBorder": "{{ border }}",
+    "promptBorderShimmer": "{{ dim_text }}",
+    "planMode": "{{ cyan }}",
+    "autoAccept": "{{ magenta }}",
+    "bashBorder": "{{ orange }}",
+    "ide": "{{ blue }}",
+    "fastMode": "{{ orange }}",
+    "fastModeShimmer": "{{ bright_yellow }}",
+
+    "diffAdded": "{{ diff_add_bg }}",
+    "diffRemoved": "{{ diff_remove_bg }}",
+    "diffAddedDimmed": "{{ diff_add_bg | mix(background, 0.5) }}",
+    "diffRemovedDimmed": "{{ diff_remove_bg | mix(background, 0.5) }}",
+    "diffAddedWord": "{{ diff_add_fg | mix(diff_add_bg, 0.7) }}",
+    "diffRemovedWord": "{{ diff_remove_fg | mix(diff_remove_bg, 0.7) }}",
+
+    "userMessageBackground": "{{ lighter_background }}",
+    "userMessageBackgroundHover": "{{ lighter_background | mix(foreground, 0.06) }}",
+    "bashMessageBackgroundColor": "{{ orange | mix(background, 0.88) }}",
+    "memoryBackgroundColor": "{{ magenta | mix(background, 0.88) }}",
+    "selectionBg": "{{ selection_bg }}",
+    "composerSidebarBackground": "{{ dark_background }}",
+
+    "rate_limit_fill": "{{ accent }}",
+    "rate_limit_empty": "{{ lighter_background }}",
+    "briefLabelYou": "{{ light_foreground }}",
+    "briefLabelClaude": "{{ accent }}",
+
+    "red_FOR_SUBAGENTS_ONLY": "{{ red }}",
+    "blue_FOR_SUBAGENTS_ONLY": "{{ blue }}",
+    "green_FOR_SUBAGENTS_ONLY": "{{ green }}",
+    "yellow_FOR_SUBAGENTS_ONLY": "{{ yellow }}",
+    "purple_FOR_SUBAGENTS_ONLY": "{{ magenta }}",
+    "orange_FOR_SUBAGENTS_ONLY": "{{ orange }}",
+    "pink_FOR_SUBAGENTS_ONLY": "{{ bright_magenta }}",
+    "cyan_FOR_SUBAGENTS_ONLY": "{{ cyan }}"
+  }
+}

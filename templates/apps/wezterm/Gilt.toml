@@ -1,0 +1,70 @@
+# Gilt: cool obsidian, warm parchment, sovereign gold.
+# {{ generated }}
+
+[colors]
+foreground = "{{ foreground }}"
+background = "{{ background }}"
+
+cursor_bg = "{{ cursor }}"
+cursor_fg = "{{ cursor_text }}"
+cursor_border = "{{ cursor }}"
+
+selection_bg = "{{ selection_bg }}"
+selection_fg = "{{ selection_fg }}"
+
+scrollbar_thumb = "{{ selection }}"
+split = "{{ split }}"
+
+ansi = [
+  "{{ ansi0 }}", # black
+  "{{ ansi1 }}", # red (oxblood)
+  "{{ ansi2 }}", # green (jade)
+  "{{ ansi3 }}", # yellow (sovereign gold)
+  "{{ ansi4 }}", # blue (lapis)
+  "{{ ansi5 }}", # magenta (amethyst)
+  "{{ ansi6 }}", # cyan (verdigris)
+  "{{ ansi7 }}", # white (parchment)
+]
+
+brights = [
+  "{{ ansi8 }}", # bright black (dusty taupe)
+  "{{ ansi9 }}", # bright red
+  "{{ ansi10 }}", # bright green
+  "{{ ansi11 }}", # bright yellow
+  "{{ ansi12 }}", # bright blue
+  "{{ ansi13 }}", # bright magenta
+  "{{ ansi14 }}", # bright cyan
+  "{{ ansi15 }}", # bright white (ivory)
+]
+
+[colors.indexed]
+16 = "{{ ansi16 }}" # copper
+17 = "{{ ansi17 }}" # bronze
+
+[colors.tab_bar]
+background = "{{ dark_background }}"
+
+[colors.tab_bar.active_tab]
+bg_color = "{{ background }}"
+fg_color = "{{ accent }}"
+
+[colors.tab_bar.inactive_tab]
+bg_color = "{{ dark_background }}"
+fg_color = "{{ muted }}"
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "{{ lighter_background }}"
+fg_color = "{{ light_foreground }}"
+
+[colors.tab_bar.new_tab]
+bg_color = "{{ dark_background }}"
+fg_color = "{{ muted }}"
+
+[colors.tab_bar.new_tab_hover]
+bg_color = "{{ lighter_background }}"
+fg_color = "{{ accent }}"
+
+[metadata]
+name = "Gilt"
+author = "Soleone"
+origin_url = "https://github.com/Soleone/omarchy-gilt-theme"
