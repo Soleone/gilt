@@ -1,0 +1,30 @@
+{
+  "name": "gilt-theme",
+  "displayName": "Gilt",
+  "description": "A dark theme of cool obsidian, warm parchment, sovereign gold, and restrained jewel tones.",
+  "version": "0.1.0",
+  "publisher": "soleone",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Soleone/omarchy-gilt-theme"
+  },
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": ["Themes"],
+  "keywords": ["theme", "dark", "gold", "gilt", "omarchy"],
+  "galleryBanner": {
+    "color": "#0D0F12",
+    "theme": "dark"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Gilt",
+        "uiTheme": "vs-dark",
+        "path": "./themes/gilt-color-theme.json"
+      }
+    ]
+  }
+}
