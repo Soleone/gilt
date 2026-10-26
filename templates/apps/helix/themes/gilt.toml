@@ -1,0 +1,137 @@
+# Gilt for Helix: cool obsidian, warm parchment, sovereign gold.
+# {{ generated }}
+
+# Syntax
+"comment" = { fg = "comment", modifiers = ["italic"] }
+"keyword" = "keyword"
+"keyword.directive" = "keyword"
+"function" = "function"
+"function.builtin" = "function"
+"function.macro" = "builtin"
+"function.special" = "builtin"
+"constructor" = "type"
+"variable" = "variable"
+"variable.parameter" = "variable"
+"variable.other.member" = "variable"
+"variable.builtin" = "builtin"
+"string" = "string"
+"string.regexp" = "escape"
+"string.special" = "escape"
+"constant" = "constant"
+"constant.numeric" = "number"
+"constant.character.escape" = "escape"
+"type" = "type"
+"type.builtin" = "type"
+"type.enum.variant" = "constant"
+"namespace" = "type"
+"attribute" = "function"
+"label" = "builtin"
+"operator" = "operator"
+"punctuation" = "punctuation"
+"special" = "escape"
+"tag" = "keyword"
+
+# Markup
+"markup.heading" = { fg = "heading", modifiers = ["bold"] }
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "link_url", modifiers = ["underlined"] }
+"markup.link.text" = "link"
+"markup.raw" = "code"
+"markup.quote" = { fg = "quote", modifiers = ["italic"] }
+"markup.list" = "code"
+
+# Diff gutter
+"diff.plus" = "diff_add_fg"
+"diff.minus" = "diff_remove_fg"
+"diff.delta" = "info"
+
+# Diagnostics
+"error" = "error"
+"warning" = "warning"
+"info" = "info"
+"hint" = "dim_text"
+"diagnostic.error" = { underline = { color = "error", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "warning", style = "curl" } }
+"diagnostic.info" = { underline = { color = "info", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "dim_text", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+# Interface
+"ui.background" = { bg = "background" }
+"ui.text" = "foreground"
+"ui.text.focus" = { fg = "bright_foreground", modifiers = ["bold"] }
+"ui.text.inactive" = "dim_text"
+"ui.cursor" = { fg = "background", bg = "dark_foreground" }
+"ui.cursor.primary" = { fg = "cursor_text", bg = "cursor" }
+"ui.cursor.match" = { fg = "accent", modifiers = ["bold", "underlined"] }
+"ui.selection" = { bg = "raised" }
+"ui.selection.primary" = { bg = "selection_bg" }
+"ui.cursorline.primary" = { bg = "cursorline" }
+"ui.linenr" = "muted"
+"ui.linenr.selected" = "accent"
+"ui.gutter" = { bg = "background" }
+"ui.statusline" = { fg = "foreground", bg = "raised" }
+"ui.statusline.inactive" = { fg = "muted", bg = "dark" }
+"ui.statusline.normal" = { fg = "background", bg = "accent", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "background", bg = "green", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "background", bg = "magenta", modifiers = ["bold"] }
+"ui.bufferline" = { fg = "muted", bg = "dark" }
+"ui.bufferline.active" = { fg = "accent", bg = "background" }
+"ui.popup" = { fg = "foreground", bg = "raised" }
+"ui.window" = "split"
+"ui.help" = { fg = "foreground", bg = "raised" }
+"ui.menu" = { fg = "foreground", bg = "raised" }
+"ui.menu.selected" = { fg = "selection_fg", bg = "selection_bg" }
+"ui.menu.scroll" = { fg = "dark_foreground", bg = "raised" }
+"ui.highlight" = { bg = "raised" }
+"ui.virtual.whitespace" = "split"
+"ui.virtual.indent-guide" = "split"
+"ui.virtual.ruler" = { bg = "raised" }
+"ui.virtual.inlay-hint" = "dark_foreground"
+"ui.virtual.jump-label" = { fg = "accent", modifiers = ["bold"] }
+
+[palette]
+background = "{{ background }}"
+dark = "{{ dark_background }}"
+raised = "{{ lighter_background }}"
+foreground = "{{ foreground }}"
+bright_foreground = "{{ bright_foreground }}"
+dark_foreground = "{{ dark_foreground }}"
+muted = "{{ muted }}"
+accent = "{{ accent }}"
+split = "{{ split }}"
+green = "{{ green }}"
+magenta = "{{ magenta }}"
+
+comment = "{{ comment }}"
+keyword = "{{ keyword }}"
+function = "{{ function }}"
+variable = "{{ variable }}"
+string = "{{ string }}"
+number = "{{ number }}"
+type = "{{ type }}"
+operator = "{{ operator }}"
+punctuation = "{{ punctuation }}"
+constant = "{{ constant }}"
+escape = "{{ escape }}"
+builtin = "{{ builtin }}"
+heading = "{{ heading }}"
+link = "{{ link }}"
+link_url = "{{ link_url }}"
+code = "{{ code }}"
+quote = "{{ quote }}"
+
+cursor = "{{ cursor }}"
+cursor_text = "{{ cursor_text }}"
+cursorline = "{{ cursorline }}"
+selection_bg = "{{ selection_bg }}"
+selection_fg = "{{ selection_fg }}"
+dim_text = "{{ dim_text }}"
+error = "{{ error }}"
+warning = "{{ warning }}"
+info = "{{ info }}"
+diff_add_fg = "{{ diff_add_fg }}"
+diff_remove_fg = "{{ diff_remove_fg }}"

@@ -8,6 +8,7 @@ jadeSurface = "#1E2A20"     # diff added / success ground
 oxbloodSurface = "#2B1C1D"  # diff removed / error ground
 split = "#4F4A3F"           # pane splits and inactive borders
 champagne = "#F4E6A6"       # brightest gold highlight
+shadeStone = "#131519"      # halfway between obsidian and raised stone: cursorline
 
 # Terminal colours. colors.toml has no black or white, so they are mapped here.
 [ansi]
@@ -41,10 +42,21 @@ number = "green"
 type = "yellow"
 operator = "light_foreground"
 punctuation = "dark_foreground"
+constant = "green"          # true, false, nil, CONSTANTS: literals, like strings and numbers
+escape = "bright_yellow"    # \n, regex, format specifiers inside strings
+builtin = "magenta"         # self, this, builtin variables, macros
+
+# Markup
+heading = "yellow"
+link = "bright_blue"
+link_url = "bright_cyan"
+code = "orange"
+quote = "light_foreground"
 
 # Interface
 cursor = "bright_foreground"
 cursor_text = "background"
+cursorline = "shadeStone"
 selection_bg = "selection"
 selection_fg = "bright_foreground"
 border = "muted"
@@ -67,6 +79,7 @@ diff_remove_bg = "oxbloodSurface"
 minimum = 4.5
 surfaces = ["background", "lighter_background"]
 text = ["comment", "keyword", "function", "variable", "string", "number", "type", "operator", "punctuation",
+        "constant", "escape", "builtin", "heading", "link", "link_url", "code", "quote",
         "dim_text", "error", "warning", "success", "info"]
 terminal = ["ansi1", "ansi2", "ansi3", "ansi4", "ansi5", "ansi6", "ansi7", "ansi8", "ansi9", "ansi10", "ansi11", "ansi12", "ansi13", "ansi14", "ansi15"]
 pairs = [["selection_fg", "selection_bg"], ["diff_add_fg", "diff_add_bg"], ["diff_remove_fg", "diff_remove_bg"]]
