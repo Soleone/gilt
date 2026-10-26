@@ -1,0 +1,15 @@
+diff --git a/roles.toml b/roles.toml
+index 3f2a1c0..8b7e4d2 100644
+--- a/roles.toml
++++ b/roles.toml
+@@ -36,9 +36,9 @@
+ [roles]
+ # Syntax
+ comment = "mutedTaupe"
+-keyword = "bright_magenta"
++keyword = "orange"
+ function = "bright_foreground"
+-variable = "bright_cyan"
++variable = "blue"
+ string = "green"
+ number = "green"
