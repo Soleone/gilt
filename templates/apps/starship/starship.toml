@@ -1,0 +1,74 @@
+# A complete example Starship prompt in Gilt. Copy to ~/.config/starship.toml,
+# or take only the palette from gilt-palette.toml.
+# {{ generated }}
+
+format = """
+$directory$git_branch$git_state$git_status$python$nodejs$golang$rust$lua$cmd_duration
+$character"""
+
+palette = "gilt"
+
+[directory]
+style = "bold gold"
+truncation_length = 3
+read_only_style = "oxblood"
+
+[git_branch]
+format = "on [$branch]($style) "
+style = "copper"
+
+[git_state]
+style = "bold warning"
+
+[git_status]
+style = "oxblood"
+
+[python]
+format = "via [py $version]($style) "
+style = "lapis"
+
+[nodejs]
+format = "via [node $version]($style) "
+style = "jade"
+
+[golang]
+format = "via [go $version]($style) "
+style = "verdigris"
+
+[rust]
+format = "via [rust $version]($style) "
+style = "copper"
+
+[lua]
+format = "via [lua $version]($style) "
+style = "lapis"
+
+[cmd_duration]
+format = "took [$duration]($style) "
+style = "taupe"
+
+[character]
+success_symbol = "[❯](gold)"
+error_symbol = "[❯](error)"
+vimcmd_symbol = "[❮](jade)"
+
+[palettes.gilt]
+obsidian = "{{ background }}"
+raised = "{{ lighter_background }}"
+parchment = "{{ foreground }}"
+ivory = "{{ bright_foreground }}"
+taupe = "{{ dim_text }}"
+dusty = "{{ muted }}"
+gold = "{{ accent }}"
+bright_gold = "{{ bright_yellow }}"
+gold_shadow = "{{ selection }}"
+oxblood = "{{ red }}"
+copper = "{{ orange }}"
+jade = "{{ green }}"
+verdigris = "{{ cyan }}"
+lapis = "{{ blue }}"
+amethyst = "{{ magenta }}"
+bronze = "{{ brown }}"
+error = "{{ error }}"
+warning = "{{ warning }}"
+success = "{{ success }}"

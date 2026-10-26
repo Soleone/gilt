@@ -1,0 +1,26 @@
+# Gilt palette for Starship. Merge into ~/.config/starship.toml,
+# then use the names in any style, e.g. style = "bold gold".
+# {{ generated }}
+
+palette = "gilt"
+
+[palettes.gilt]
+obsidian = "{{ background }}"
+raised = "{{ lighter_background }}"
+parchment = "{{ foreground }}"
+ivory = "{{ bright_foreground }}"
+taupe = "{{ dim_text }}"
+dusty = "{{ muted }}"
+gold = "{{ accent }}"
+bright_gold = "{{ bright_yellow }}"
+gold_shadow = "{{ selection }}"
+oxblood = "{{ red }}"
+copper = "{{ orange }}"
+jade = "{{ green }}"
+verdigris = "{{ cyan }}"
+lapis = "{{ blue }}"
+amethyst = "{{ magenta }}"
+bronze = "{{ brown }}"
+error = "{{ error }}"
+warning = "{{ warning }}"
+success = "{{ success }}"

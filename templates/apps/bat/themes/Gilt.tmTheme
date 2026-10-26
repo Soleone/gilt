@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Gilt for bat and other TextMate theme readers. {{ generated }} -->
+<plist version="1.0">
+<dict>
+  <key>name</key>
+  <string>Gilt</string>
+  <key>author</key>
+  <string>Soleone</string>
+  <key>colorSpaceName</key>
+  <string>sRGB</string>
+  <key>semanticClass</key>
+  <string>theme.dark.gilt</string>
+  <key>uuid</key>
+  <string>6b0d4e57-2b1f-4c39-9a8e-0d0f12d4af37</string>
+  <key>settings</key>
+  <array>
+    <dict>
+      <key>settings</key>
+      <dict>
+        <key>background</key>
+        <string>{{ background }}</string>
+        <key>foreground</key>
+        <string>{{ foreground }}</string>
+        <key>caret</key>
+        <string>{{ cursor }}</string>
+        <key>selection</key>
+        <string>{{ selection_bg }}</string>
+        <key>selectionForeground</key>
+        <string>{{ selection_fg }}</string>
+        <key>lineHighlight</key>
+        <string>{{ cursorline }}</string>
+        <key>gutter</key>
+        <string>{{ background }}</string>
+        <key>gutterForeground</key>
+        <string>{{ muted }}</string>
+        <key>invisibles</key>
+        <string>{{ split }}</string>
+        <key>findHighlight</key>
+        <string>{{ accent }}</string>
+        <key>findHighlightForeground</key>
+        <string>{{ background }}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Comment</string>
+      <key>scope</key>
+      <string>comment, punctuation.definition.comment</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ comment }}</string>
+        <key>fontStyle</key>
+        <string>italic</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Keyword</string>
+      <key>scope</key>
+      <string>keyword, keyword.control, storage.type, storage.modifier, keyword.operator.new, keyword.operator.expression, keyword.operator.word, entity.name.tag</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ keyword }}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Operator</string>
+      <key>scope</key>
+      <string>keyword.operator, punctuation.separator.key-value</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ operator }}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Function</string>
+      <key>scope</key>
+      <string>entity.name.function, support.function, meta.function-call variable.function, variable.function, meta.decorator, entity.name.function.decorator</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ function }}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Variable</string>
+      <key>scope</key>
+      <string>variable, variable.other, variable.parameter, meta.definition.variable, variable.other.member, variable.other.property, support.variable.property, entity.other.attribute-name, support.type.property-name, meta.mapping.key string</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ variable }}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Builtin</string>
+      <key>scope</key>
+      <string>variable.language, support.variable, entity.name.function.macro, support.function.builtin.shell</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ builtin }}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>String</string>
+      <key>scope</key>
+      <string>string, punctuation.definition.string</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ string }}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Number</string>
+      <key>scope</key>
+      <string>constant.numeric</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ number }}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Constant</string>
+      <key>scope</key>
+      <string>constant.language, support.constant, variable.other.constant, constant.other</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ constant }}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Escape</string>
+      <key>scope</key>
+      <string>constant.character.escape, string.regexp, constant.other.placeholder, punctuation.section.interpolation, punctuation.definition.template-expression</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ escape }}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Type</string>
+      <key>scope</key>
+      <string>entity.name.type, entity.name.class, entity.name.struct, entity.name.enum, entity.name.interface, support.type, support.class, entity.other.inherited-class, entity.name.namespace, entity.name.module, storage.type.primitive</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ type }}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Punctuation</string>
+      <key>scope</key>
+      <string>punctuation, meta.brace</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ punctuation }}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Heading</string>
+      <key>scope</key>
+      <string>markup.heading, entity.name.section, markup.heading punctuation.definition.heading</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ heading }}</string>
+        <key>fontStyle</key>
+        <string>bold</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Bold</string>
+      <key>scope</key>
+      <string>markup.bold</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string>bold</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Italic</string>
+      <key>scope</key>
+      <string>markup.italic</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string>italic</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Link URL</string>
+      <key>scope</key>
+      <string>markup.underline.link, markup.link</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ link_url }}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Link text</string>
+      <key>scope</key>
+      <string>string.other.link.title, string.other.link.description, meta.link.inline.description</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ link }}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Code</string>
+      <key>scope</key>
+      <string>markup.inline.raw, markup.raw, markup.fenced_code, markup.list, punctuation.definition.list</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ code }}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Quote</string>
+      <key>scope</key>
+      <string>markup.quote</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ quote }}</string>
+        <key>fontStyle</key>
+        <string>italic</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Diff header</string>
+      <key>scope</key>
+      <string>meta.diff.header, meta.diff.range, meta.diff.index</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ builtin }}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Inserted</string>
+      <key>scope</key>
+      <string>markup.inserted</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ diff_add_fg }}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Deleted</string>
+      <key>scope</key>
+      <string>markup.deleted</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ diff_remove_fg }}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Changed</string>
+      <key>scope</key>
+      <string>markup.changed</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ info }}</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Invalid</string>
+      <key>scope</key>
+      <string>invalid, invalid.illegal</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>{{ error }}</string>
+      </dict>
+    </dict>
+  </array>
+</dict>
+</plist>

@@ -184,7 +184,7 @@ def main():
         files, used = outputs(names)
         unused = sorted(set(roles["roles"]) - used)
         if unused:
-            print(f"warning: roles not used by any template: {', '.join(unused)}", file=sys.stderr)
+            problems.append(f"roles not used by any template: {', '.join(unused)}")
 
         expected = {ROOT / rel for rel in files}
         orphans = sorted(
