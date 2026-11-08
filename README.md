@@ -23,7 +23,7 @@ omarchy theme install https://github.com/Soleone/omarchy-gilt-theme.git
 Every app theme lives in `apps/`, laid out the way the app expects. Clone the repo once, then copy what you use:
 
 ```bash
-git clone https://github.com/Soleone/gilt.git && cd gilt
+git clone https://github.com/Soleone/omarchy-gilt-theme.git && cd omarchy-gilt-theme
 ```
 
 | App | Install |
@@ -42,7 +42,7 @@ git clone https://github.com/Soleone/gilt.git && cd gilt
 **Neovim** loads straight from the repo with any plugin manager, for example lazy.nvim:
 
 ```lua
-{ "Soleone/gilt", lazy = false, priority = 1000, config = function() vim.cmd.colorscheme("gilt") end }
+{ "Soleone/omarchy-gilt-theme", lazy = false, priority = 1000, config = function() vim.cmd.colorscheme("gilt") end }
 ```
 
 ## Palette at a glance
