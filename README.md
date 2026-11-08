@@ -36,6 +36,7 @@ git clone https://github.com/Soleone/gilt.git && cd gilt
 | Starship | merge `apps/starship/gilt-palette.toml` into `~/.config/starship.toml`, or use the full example `apps/starship/starship.toml` |
 | Claude Code | `mkdir -p ~/.claude/themes && cp apps/claude-code/gilt.json ~/.claude/themes/`, then pick **Gilt** in `/theme` |
 | Pi | `cp apps/pi/gilt.json ~/.pi/agent/themes/`, then choose the `gilt` theme |
+| OpenClaw | Import [`apps/openclaw/gilt.json`](apps/openclaw/gilt.json) with the agent's `theme` tool, then select **Gilt** (see below) |
 | tuios | `cp apps/tuios/gilt.json ~/.config/tuios/themes/` |
 | shadcn / tweakcn | `npx shadcn@latest add https://tweakcn.com/r/themes/cmutkrptf000004i93eajenbn`, or open it on [tweakcn](https://tweakcn.com/themes/cmutkrptf000004i93eajenbn) |
 
@@ -44,6 +45,14 @@ git clone https://github.com/Soleone/gilt.git && cd gilt
 ```lua
 { "Soleone/gilt", lazy = false, priority = 1000, config = function() vim.cmd.colorscheme("gilt") end }
 ```
+
+### OpenClaw
+
+The generated [`apps/openclaw/gilt.json`](apps/openclaw/gilt.json) is an OpenClaw personal theme definition with dark and light palettes. Ask your OpenClaw agent:
+
+> Read `apps/openclaw/gilt.json` from this checkout. Use the `theme` tool to import it with `id: "gilt"`, `definition` set to the parsed JSON, `apply: true`, and `mode: "dark"`.
+
+This saves and activates `user/gilt` for your profile, without a plugin or Gateway restart. Select **Gilt** in appearance settings afterward to switch between dark, light, and system mode. After regenerating the theme, repeat the import with the same ID to update the saved copy. The file is the definition itself, not a complete tool-call payload.
 
 ## Palette at a glance
 
