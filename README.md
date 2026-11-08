@@ -54,6 +54,8 @@ The generated [`apps/openclaw/gilt.json`](apps/openclaw/gilt.json) is an OpenCla
 
 This saves and activates `user/gilt` for your profile, without a plugin or Gateway restart. Select **Gilt** in appearance settings afterward to switch between dark, light, and system mode. After regenerating the theme, repeat the import with the same ID to update the saved copy. The file is the definition itself, not a complete tool-call payload.
 
+OpenClaw uses `accent` for heading and link text as well as controls, unlike shadcn's selection-surface token. This target therefore uses sovereign gold in dark mode and a deeper bronze in light mode, with contrasting text on filled accent controls. Keep **Accent color** on **Theme default** to use these colors; a manually selected swatch overrides them.
+
 ## Palette at a glance
 
 ![Gilt theme palette](palette.svg)
