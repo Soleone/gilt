@@ -135,7 +135,7 @@ Edit the palette in `colors.toml`, then reapply it:
 omarchy theme refresh
 ```
 
-To change the other apps, edit `colors.toml` or `roles.toml` and regenerate. The files in `apps/`, `lua/gilt/palette.lua` and the VS Code package are generated, so edit `templates/` rather than those files (JSON and plist formats cannot carry a do-not-edit comment).
+To change the other apps, edit `colors.toml` or `roles.toml` and regenerate. The files in `apps/`, `lua/gilt/palette.lua` and the VS Code package are generated from `templates/` or copied from `static/`, so edit those sources rather than the outputs (JSON and plist formats cannot carry a do-not-edit comment).
 
 ```bash
 python3 scripts/build.py             # regenerate every app
